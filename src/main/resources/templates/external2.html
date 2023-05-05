@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:include="layout :: headerFragment">
+    </head>
+<!--    <body>-->
+<!--        <div class="container">-->
+<!--            <div class="jumbotron text-center">-->
+<!--                <h1>Customer Portal</h1>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam-->
+<!--                    erat lectus, vehicula feugiat ultricies at, tempus sed ante. Cras-->
+<!--                    arcu erat, lobortis vitae quam et, mollis pharetra odio. Nullam sit-->
+<!--                    amet congue ipsum. Nunc dapibus odio ut ligula venenatis porta non-->
+<!--                    id dui. Duis nec tempor tellus. Suspendisse id blandit ligula, sit-->
+<!--                    amet varius mauris. Nulla eu eros pharetra, tristique dui quis,-->
+<!--                    vehicula libero. Aenean a neque sit amet tellus porttitor rutrum nec-->
+<!--                    at leo.-->
+<!--                </p>-->
+
+<!--                <h2>Existing Customers</h2>-->
+<!--                <div class="well">-->
+<!--                    <b>Enter the intranet: </b><a th:href="@{/customers}">customers</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="pagefoot" th:include="layout :: footerFragment">Footer</div>-->
+<!--        </div>-->
+<!--    </body>-->
+
+
+
+
+<head>
+    <title>RelianceHMO</title>
+    <meta charset="utf-8" />
+<!--    @include('includes.gtm-code.header')-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="{{ asset("/assets/js/ie/html5shiv.js") }}"></script><![endif]-->
+<!--    <link rel="stylesheet" href="{{ asset("/assets/css/main.css") }}" />-->
+    <link rel="icon" type="image/png" sizes="32x32" href='{{ asset("/dist/img/favicon-32x32.png") }}'>
+    <!--[if lte IE 8]><link rel='stylesheet' href='{{ asset("/assets/css/ie8.css") }}' /><![endif]-->
+    <!--[if lte IE 9]><link rel='stylesheet' href='{{ asset("/assets/css/ie9.css") }}' /><![endif]-->
+    <style>
+        .ghost-button {
+            display: inline-block;
+            width: 200px;
+            padding: 8px;
+            color: #fff;
+            border: 2px solid #fff;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body class="loading">
+@include('includes.gtm-code.body')
+<div id="wrapper">
+    <div id="bg"></div>
+    <div id="overlay"></div>
+    <div id="main">
+
+        <!-- Header -->
+        <header id="header">
+            <h1>RelianceHMO</h1>
+            <p>Redefining Heath Insurance in Africa using Telemedicine and Data Science</p>
+            <nav>
+                <ul>
+                    <li><a href="https://twitter.com/Reliancehmo" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://facebook.com/reliancehmo/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/reliancehmo/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="mailto:info@reliancehmo.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </nav>
+            <br>
+            <footer>
+                <ul class="buttons">
+                    <li><a href="/login" class="ghost-button"><h2>Login</h2></a></li>
+                </ul>
+            </footer>
+        </header>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <span class="copyright">2017 &copy; RelianceHMO.</span>
+        </footer>
+
+    </div>
+</div>
+<!--[if lte IE 8]><script src="{{ asset("/assets/js/ie/respond.min.js") }}"></script><![endif]-->
+<script>
+    window.onload = function() { document.body.className = ''; }
+    window.ontouchmove = function() { return false; }
+    window.onorientationchange = function() { document.body.scrollTop = 0; }
+</script>
+</body>
+</html>
